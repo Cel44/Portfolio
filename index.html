@@ -148,7 +148,7 @@
             <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Milestone 2 project -->
-                <a href="" class="group block bg-white rounded-2xl shadow-xl transform transition">
+                <div class="group block bg-white rounded-2xl shadow-xl transform transition">
 
                     <div class="h-48 bg-gray-100 rounded-t-2xl overflow-hidden">
                         <img src="assets/revofun.png" alt="RevoFun" class="w-full h-full object-cover transition-transform" />
@@ -158,45 +158,32 @@
                         <h3 class="font-semibold">RevoFun</h3>
                         <p class="text-sm text-gray-600 mt-1">A small collection of browser games (Memory Cards, Rock-Paper-Scissors, Number Guessing).</p>
 
-                        <!-- THIS IS THE POP UP PAGE -->
-                        <div id="modal-revofun" class="fixed inset-0 hidden justify-center items-center bg-gray-600/50 ">
-                        <div class="flex justify-center items-center h-full w-full">
-                        <div class="bg-grey-400 rounded-lg shadow-lg p-4 fade-in modal-content z-50">
-                                <h2 class="text-xl font-bold mb-4">Title</h2>
-
-                                <div>
-                                    <p>
-                                        Change later for description. Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.
-                                    </p>
-                                </div>
-
-                        <!-- THIS IS THE CLOSE BUTTON -->
-                            <div>
-                                <button id="close-modal" class="bg-indigo-600 text-white px-3 py-1 rounded-full mt-2">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                        </div>
-
                         <!-- THIS IS THE BUTTON -->
-                        <button id="revofun-details" class="mt-4 inline-block border border-indigo-600 text-indigo-600 px-3 py-1 rounded-full hover:bg-indigo-600 hover:text-white hover:scale-105 transition">
+                        <button data-modal-target="modal-revofun" class="mt-4 inline-block border border-indigo-600 text-indigo-600 px-3 py-1 rounded-full hover:bg-indigo-600 hover:text-white hover:scale-105 transition">
                             See Details
                         </button>
                     </div>
 
-                </a>
+                </div>
 
                 <!-- Milestone 3 project -->
-                <a href="https://github.com/Cel44/milestone-3-Cel44.git" class="group block bg-white rounded-2xl shadow-xl transform transition">
+                <div class="group block bg-white rounded-2xl shadow-xl transform transition">
                     <div class="h-48 bg-gray-100 rounded-t-2xl overflow-hidden">
                         <img src="assets/revoushop.png" alt="RevouShop" class="w-full h-full object-cover transition-transform" />
                     </div>
 
                     <div class="p-4">
                         <h3 class="font-semibold">RevouShop</h3>
-                        <p class="text-sm text-gray-600 mt-1">A marketplace website built with React; Next.Js; and tailwindcss, featuring product listings, a shopping cart, and admin dashboard.</p>
+                        <p class="text-sm text-gray-600 mt-1">A marketplace website built with React; Next.Js; and Tailwind CSS, featuring product listings, a shopping cart, and admin dashboard.</p>
+
+                        <div class="mt-4 flex gap-3">
+                            <a href="https://github.com/Cel44/milestone-3-Cel44.git" target="_blank" rel="noopener" class="inline-block border border-gray-300 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-100 transition">View Repo</a>
+                            <button data-modal-target="modal-revoushop" class="inline-block border border-indigo-600 text-indigo-600 px-3 py-1 rounded-full hover:bg-indigo-600 hover:text-white hover:scale-105 transition">
+                                See Details
+                            </button>
+                        </div>
                     </div>
-                </a>
+                </div>
 
                 <!-- Placeholder project -->
                 <div class="bg-white rounded-2xl shadow-xl p-4">
@@ -233,6 +220,83 @@
             <div class="max-w-5xl mx-auto px-6 text-center text-sm text-gray-600">© 2026 Your Name — All Rights Reserved</div>
         </footer>
 
+        <!-- MODALS: full-page popups with blurred backdrop -->
+        <!-- RevoFun modal -->
+        <div id="modal-revofun" role="dialog" aria-hidden="true" class="fixed inset-0 hidden z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+            <div class="relative w-full h-full">
+                <!-- top-right close -->
+                <div class="absolute top-4 right-4 z-20">
+                    <button class="modal-close text-white bg-gray-800/60 hover:bg-gray-800/80 rounded-full p-2" data-modal-close aria-label="Close modal">✕</button>
+                </div>
+
+                <!-- FULL-PAGE MODAL CONTENT -->
+                <div class="bg-white w-full h-full overflow-auto p-6" role="document" tabindex="-1">
+                    <div class="flex items-start justify-between">
+                        <h2 class="text-2xl font-bold mb-2">RevoFun — Mini Games Collection</h2>
+                    </div>
+
+                    <div class="mt-4 text-gray-700">
+                        <p class="mb-3">RevoFun is a collection of small browser games created during the milestone project: Memory Cards, Rock-Paper-Scissors, and Number Guessing. The modal summarizes the project, technologies used, key features, and notes on implementation.</p>
+
+                        <h3 class="font-semibold mt-3">Features</h3>
+                        <ul class="list-disc list-inside text-sm text-gray-600">
+                            <li>Memory Cards: Flip matching pairs, score tracking, and timer.</li>
+                            <li>Rock-Paper-Scissors: Best-of-three rounds with basic AI opponent.</li>
+                            <li>Number Guessing: Random number, hints, and limited attempts.</li>
+                        </ul>
+
+                        <h3 class="font-semibold mt-3">Tech Stack</h3>
+                        <p class="text-sm text-gray-600">Vanilla HTML, CSS, and JavaScript — focused on DOM manipulation, event handling, and responsive UI with Tailwind CSS.</p>
+
+                        <h3 class="font-semibold mt-3">Implementation Notes</h3>
+                        <ul class="list-disc list-inside text-sm text-gray-600">
+                            <li>Modular JS functions per game for easier maintenance.</li>
+                            <li>Simple state management using objects and arrays; persisted score in session where appropriate.</li>
+                            <li>Accessible controls with keyboard support and clear focus styles.</li>
+                        </ul>
+
+                        <h3 class="font-semibold mt-3">Screenshots / Preview</h3>
+                        <div class="mt-2 grid grid-cols-3 gap-2">
+                            <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">Memory</div>
+                            <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">RPS</div>
+                            <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">Guess</div>
+                        </div>
+
+                        <p class="mt-3 text-sm text-gray-500">This modal contains project details only. Close to return to the page.</p>
+                    </div>
+
+                    <div class="mt-6 flex justify-end">
+                        <button class="modal-close bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700" data-modal-close>Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RevouShop modal (Project 3) -->
+        <div id="modal-revoushop" role="dialog" aria-hidden="true" class="fixed inset-0 hidden z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+            <div class="relative w-full h-full">
+                <!-- top-right close -->
+                <div class="absolute top-4 right-4 z-20">
+                    <button class="modal-close text-white bg-gray-800/60 hover:bg-gray-800/80 rounded-full p-2" data-modal-close aria-label="Close modal">✕</button>
+                </div>
+
+                <!-- FULL-PAGE MODAL CONTENT -->
+                <div class="bg-white w-full h-full overflow-auto p-6" role="document" tabindex="-1">
+                    <div class="flex items-start justify-between">
+                        <h2 class="text-2xl font-bold mb-2">RevouShop</h2>
+                    </div>
+
+                    <div class="mt-4 text-gray-700">
+                        <p>will change later</p>
+                    </div>
+
+                    <div class="mt-6 flex justify-end">
+                        <button class="modal-close bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700" data-modal-close>Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script>
         // mobile nav toggle
         const toggle = document.getElementById('mobile-toggle');
@@ -250,6 +314,61 @@
         });
 
         // pop-up modal for project details
+        // modal behavior: open by [data-modal-target], close by [data-modal-close], overlay click and Esc
+        (function() {
+            const openButtons = document.querySelectorAll('[data-modal-target]');
+            const closeButtons = document.querySelectorAll('[data-modal-close]');
+
+            function openModal(modal) {
+                if (!modal) return;
+                modal.classList.remove('hidden');
+                modal.setAttribute('aria-hidden', 'false');
+                // prevent background scroll
+                document.documentElement.style.overflow = 'hidden';
+                // move focus to first focusable element in modal
+                const focusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                if (focusable) focusable.focus();
+            }
+
+            function closeModal(modal) {
+                if (!modal) return;
+                modal.classList.add('hidden');
+                modal.setAttribute('aria-hidden', 'true');
+                document.documentElement.style.overflow = '';
+            }
+
+            openButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const id = btn.getAttribute('data-modal-target');
+                    const modal = document.getElementById(id);
+                    openModal(modal);
+                });
+            });
+
+            closeButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    // find closest modal ancestor
+                    const modal = btn.closest('[role="dialog"]') || document.getElementById('modal-revofun');
+                    closeModal(modal);
+                });
+            });
+
+            // close when clicking the overlay (but not when clicking modal content)
+            document.querySelectorAll('[role="dialog"]').forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeModal(modal);
+                });
+            });
+
+            // close on Esc
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    document.querySelectorAll('[role="dialog"]').forEach(modal => {
+                        if (!modal.classList.contains('hidden')) closeModal(modal);
+                    });
+                }
+            });
+        })();
 
         </script>
     </body>

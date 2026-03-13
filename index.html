@@ -148,7 +148,7 @@
             <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Milestone 2 project -->
-                <a href="https://github.com/Cel44/milestone-2-Cel44.git" class="group block bg-white rounded-2xl shadow-xl hover:scale-105 transform transition">
+                <a href="" class="group block bg-white rounded-2xl shadow-xl transform transition">
 
                     <div class="h-48 bg-gray-100 rounded-t-2xl overflow-hidden">
                         <img src="assets/revofun.png" alt="RevoFun" class="w-full h-full object-cover transition-transform" />
@@ -157,11 +157,37 @@
                     <div class="p-4">
                         <h3 class="font-semibold">RevoFun</h3>
                         <p class="text-sm text-gray-600 mt-1">A small collection of browser games (Memory Cards, Rock-Paper-Scissors, Number Guessing).</p>
+
+                        <!-- THIS IS THE POP UP PAGE -->
+                        <div id="modal-revofun" class="fixed inset-0 hidden justify-center items-center bg-gray-600/50 ">
+                        <div class="flex justify-center items-center h-full w-full">
+                        <div class="bg-grey-400 rounded-lg shadow-lg p-4 fade-in modal-content z-50">
+                                <h2 class="text-xl font-bold mb-4">Title</h2>
+
+                                <div>
+                                    <p>
+                                        Change later for description. Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.Change later for description.
+                                    </p>
+                                </div>
+
+                        <!-- THIS IS THE CLOSE BUTTON -->
+                            <div>
+                                <button id="close-modal" class="bg-indigo-600 text-white px-3 py-1 rounded-full mt-2">Close</button>
+                            </div>
+                        </div>
                     </div>
+                        </div>
+
+                        <!-- THIS IS THE BUTTON -->
+                        <button id="revofun-details" class="mt-4 inline-block border border-indigo-600 text-indigo-600 px-3 py-1 rounded-full hover:bg-indigo-600 hover:text-white hover:scale-105 transition">
+                            See Details
+                        </button>
+                    </div>
+
                 </a>
 
                 <!-- Milestone 3 project -->
-                <a href="https://github.com/Cel44/milestone-3-Cel44.git" class="group block bg-white rounded-2xl shadow-xl hover:scale-105 transform transition">
+                <a href="https://github.com/Cel44/milestone-3-Cel44.git" class="group block bg-white rounded-2xl shadow-xl transform transition">
                     <div class="h-48 bg-gray-100 rounded-t-2xl overflow-hidden">
                         <img src="assets/revoushop.png" alt="RevouShop" class="w-full h-full object-cover transition-transform" />
                     </div>
@@ -222,6 +248,9 @@
             if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
             });
         });
+
+        // pop-up modal for project details
+
         </script>
     </body>
 </html>

@@ -108,7 +108,7 @@
         </section>
 
         <!-- EDUCATION -->
-        <section id="education" class="py-10">
+        <section id="education" class="md:py-10">
             <div class="max-w-5xl mx-auto px-6">
                 <h2 class="text-2xl font-bold my-4 md:text-3xl">
                     Education
@@ -150,10 +150,10 @@
             </div>
         </section>
 
-        <!-- PROJECTS -->
-        <section id="projects" class="py-10">
+        <!------------------------------------ PROJECTS ------------------------------------>
+        <section id="projects" class="md:py-10">
             <div class="max-w-5xl mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center">Projects</h2>
+                <h2 class="text-3xl font-bold">Projects</h2>
 
             <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -169,9 +169,14 @@
                         <p class="text-sm text-gray-600 mt-1">A small collection of browser games (Memory Cards, Rock-Paper-Scissors, Number Guessing).</p>
 
                         <!-- THIS IS THE BUTTON -->
-                        <button data-modal-target="modal-revofun" class="mt-4 inline-block border border-indigo-600 text-indigo-600 px-3 py-1 rounded-full hover:bg-indigo-600 hover:text-white hover:scale-105 transition">
-                            See Details
-                        </button>
+
+                        <div class="mt-4 flex gap-3">
+                            <button data-modal-target="modal-revofun" class="inline-block border border-indigo-600 text-indigo-600 px-3 py-1 rounded-full hover:bg-indigo-600 hover:text-white hover:scale-105 transition">
+                                See Details
+                            </button>
+                            
+                            <a href="https://github.com/Revou-FSSE-Jun25/milestone-2-Cel44.git" target="_blank" rel="noopener" class="inline-block border border-gray-300 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-100 transition">View Repo</a>
+                        </div>
                     </div>
 
                 </div>
@@ -187,10 +192,11 @@
                         <p class="text-sm text-gray-600 mt-1">A marketplace website built with React; Next.Js; and Tailwind CSS, featuring product listings, a shopping cart, and admin dashboard.</p>
 
                         <div class="mt-4 flex gap-3">
-                            <a href="https://github.com/Cel44/milestone-3-Cel44.git" target="_blank" rel="noopener" class="inline-block border border-gray-300 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-100 transition">View Repo</a>
                             <button data-modal-target="modal-revoushop" class="inline-block border border-indigo-600 text-indigo-600 px-3 py-1 rounded-full hover:bg-indigo-600 hover:text-white hover:scale-105 transition">
                                 See Details
                             </button>
+                            
+                            <a href="https://github.com/Cel44/milestone-3-Cel44.git" target="_blank" rel="noopener" class="inline-block border border-gray-300 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-100 transition">View Repo</a>
                         </div>
                     </div>
                 </div>
@@ -230,82 +236,109 @@
             <div class="max-w-5xl mx-auto px-6 text-center text-sm text-gray-600">© 2026 Your Name — All Rights Reserved</div>
         </footer>
 
-        <!-- MODALS: full-page popups with blurred backdrop -->
-        <!-- RevoFun modal -->
+        <!------------------------ MODAL -------------------------------->
+
+
+        <!------------------------ REVOFUN MODAL PROJECT 2 -------------------------------->
         <div id="modal-revofun" role="dialog" aria-hidden="true" class="fixed inset-0 hidden z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-            <div class="relative w-full h-full">
-                <!-- top-right close -->
+            <div class="bg-white rounded-2xl w-[90%] max-w-2xl max-h-[80vh] overflow-y-auto p-6 relative shadow-2xl">
+
+                <!------------------------ TOP-RIGHT CLOSE BUTTON ------------------------------>
+
                 <div class="absolute top-4 right-4 z-20">
-                    <button class="modal-close text-white bg-gray-800/60 hover:bg-gray-800/80 rounded-full p-2" data-modal-close aria-label="Close modal">✕</button>
+                    <button class="modal-close text-white bg-red-600 hover:bg-red-800 rounded-full p-2" data-modal-close aria-label="Close modal">CLOSE</button>
                 </div>
 
-                <!-- FULL-PAGE MODAL CONTENT -->
+                <!------------------------ FULL-PAGE MODAL CONTENT ------------------------------>
                 <div class="bg-white w-full h-full overflow-auto p-6" role="document" tabindex="-1">
                     <div class="flex items-start justify-between">
-                        <h2 class="text-2xl font-bold mb-2">RevoFun — Mini Games Collection</h2>
+                        <h2 class="text-2xl font-bold mb-2">RevoFun — Web Mini Games</h2>
                     </div>
 
                     <div class="mt-4 text-gray-700">
-                        <p class="mb-3">RevoFun is a collection of small browser games created during the milestone project: Memory Cards, Rock-Paper-Scissors, and Number Guessing. The modal summarizes the project, technologies used, key features, and notes on implementation.</p>
+                        <h3 class="font-bold">Overview</h3>
+                        <p class="mb-2">RevoFun is a collection of small web games I developed during the milestone project, which contains the games: Memory Cards, Rock-Paper-Scissors, and Number Guessing. I engineered the core game logic using Vanilla JavaScript and the DOM API, implementing randomized events and real-time state updates. I also designed a fully responsive, mobile-first interface using CSS transitions and Flexbox, ensuring a seamless user experience across all devices without the use of external frameworks.
+                        </p>
 
-                        <h3 class="font-semibold mt-3">Features</h3>
+                        <h3 class="font-bold mt-4">Method</h3>
+                        <p class="text-m font-medium">Development Process</p>
                         <ul class="list-disc list-inside text-sm text-gray-600">
-                            <li>Memory Cards: Flip matching pairs, score tracking, and timer.</li>
-                            <li>Rock-Paper-Scissors: Best-of-three rounds with basic AI opponent.</li>
-                            <li>Number Guessing: Random number, hints, and limited attempts.</li>
+                            <li>Built using HTML, CSS, and vanilla JavaScript without external frameworks to strengthen fundamental frontend skills</li>
+                            <li>Implemented DOM manipulation and event-driven programming to handle user input and game logic</li>
+                            <li>Applied basic UI feedback and state updates to make gameplay clear and interactive</li>
                         </ul>
 
-                        <h3 class="font-semibold mt-3">Tech Stack</h3>
-                        <p class="text-sm text-gray-600">Vanilla HTML, CSS, and JavaScript — focused on DOM manipulation, event handling, and responsive UI with Tailwind CSS.</p>
+                        <h3 class="font-bold mt-4">Features</h3>
+                            <p class="font-semibold">Memory Cards</p>
+                                <ul class="list-disc list-inside text-sm text-gray-600">
+                                    <li>Card matching logic using JavaScript state tracking</li>
+                                    <li>Randomized card positions for replayability</li>
+                                </ul>
 
-                        <h3 class="font-semibold mt-3">Implementation Notes</h3>
-                        <ul class="list-disc list-inside text-sm text-gray-600">
-                            <li>Modular JS functions per game for easier maintenance.</li>
-                            <li>Simple state management using objects and arrays; persisted score in session where appropriate.</li>
-                            <li>Accessible controls with keyboard support and clear focus styles.</li>
+                            <p class="font-semibold mt-2">Rock-Paper-Scissors</p>
+                                <ul class="list-disc list-inside text-sm text-gray-600">
+                                    <li>Player vs computer gameplay</li>
+                                    <li>Randomized computer choices</li>
+                                </ul>
+
+                            <p class="font-semibold mt-2">Number Guessing</p>
+                                <ul class="list-disc list-inside text-sm text-gray-600">
+                                    <li>Random number generation and user input handling</li>
+                                    <li>Feedback on higher/lower guesses</li>
+                                    <li>Limited attempts for added challenge</li>
+                                </ul>
+
+                            <p class="font-semibold mt-2">Additional features</p>
+                                <ul class="list-disc list-inside text-sm text-gray-600">
+                                    <li>Responsive design for mobile and desktop</li>
+                                    <li>Basic UI feedback (e.g., win/loss messages, score tracking)</li>
+                                    <li>Instant game feedback without page reloads</li>
+                                </ul>
+                            </li>
                         </ul>
+
+                        <h3 class="font-semibold mt-4">Tech Stack</h3>
+                        <p class="text-sm text-gray-600">Vanilla HTML, CSS, and JavaScript — focused on DOM manipulation, event handling, and responsive UI.</p>
 
                         <h3 class="font-semibold mt-3">Screenshots / Preview</h3>
                         <div class="mt-2 grid grid-cols-3 gap-2">
-                            <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">Memory</div>
-                            <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">RPS</div>
-                            <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">Guess</div>
+                            <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">
+                                <img src="assets/memory.png" alt="Memory Cards" class="w-full h-full object-cover object-[0%_60%]" />
+                            </div>
+
+                            <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">
+                                <img src="assets/RPS.png" alt="Rock-Paper-Scissors" class="w-full h-full object-cover object-[5%_60%]" />
+                            </div>
+
+                            <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">
+                                <img src="assets/guess.png" alt="Number Guessing" class="w-full h-full object-cover object-[5%_60%]" />
+                            </div>
                         </div>
 
-                        <p class="mt-3 text-sm text-gray-500">This modal contains project details only. Close to return to the page.</p>
+                        <p class="mt-3 text-sm text-gray-500">This modal contains project details only. Press [esc] or close to return to the page.</p>
                     </div>
 
-                    <div class="mt-6 flex justify-end">
-                        <button class="modal-close bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700" data-modal-close>Close</button>
-                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- RevouShop modal (Project 3) -->
+        <!------------------------ REVOUSHOP MODAL PROJECT 3 -------------------------------->
+
         <div id="modal-revoushop" role="dialog" aria-hidden="true" class="fixed inset-0 hidden z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-            <div class="relative w-full h-full">
-                <!-- top-right close -->
+            <div class="bg-white rounded-2xl w-[90%] max-w-2xl max-h-[80vh] overflow-y-auto p-6 relative shadow-2xl">
+
+                <!------------------------ TOP-RIGHT CLOSE BUTTON ------------------------------>
+
                 <div class="absolute top-4 right-4 z-20">
-                    <button class="modal-close text-white bg-gray-800/60 hover:bg-gray-800/80 rounded-full p-2" data-modal-close aria-label="Close modal">✕</button>
+                    <button class="modal-close text-white bg-red-600 hover:bg-red-800 rounded-full p-2" data-modal-close aria-label="Close modal">CLOSE</button>
                 </div>
 
-                <!-- FULL-PAGE MODAL CONTENT -->
-                <div class="bg-white w-full h-full overflow-auto p-6" role="document" tabindex="-1">
-                    <div class="flex items-start justify-between">
-                        <h2 class="text-2xl font-bold mb-2">RevouShop</h2>
-                    </div>
-
-                    <div class="mt-4 text-gray-700">
-                        <p>will change later</p>
-                    </div>
-
-                    <div class="mt-6 flex justify-end">
-                        <button class="modal-close bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700" data-modal-close>Close</button>
-                    </div>
-                </div>
+                <!------------------------ FULL-PAGE MODAL CONTENT ------------------------------>
+                
             </div>
         </div>
+
+        <!------------------------ MODAL STOPS HERE -------------------------------->
 
         <script>
         // mobile nav toggle

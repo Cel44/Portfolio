@@ -161,7 +161,7 @@
                 <div class="group block bg-white rounded-2xl shadow-xl transform transition">
 
                     <div class="h-48 bg-gray-100 rounded-t-2xl overflow-hidden">
-                        <img src="assets/revofun.png" alt="RevoFun" class="w-full h-full object-cover transition-transform" />
+                        <img src="assets/revofun.png" alt="RevoFun" class="w-full h-full object-fit transition-transform" />
                     </div>
 
                     <div class="p-4">
@@ -181,10 +181,34 @@
 
                 </div>
 
+                <!-- Catalog Assignment -->
+                <div class="group block bg-white rounded-2xl shadow-xl transform transition">
+
+                    <div class="h-48 bg-gray-100 rounded-t-2xl overflow-hidden">
+                        <img src="assets/catalog.png" alt="Catalog" class="w-full h-full object-fit transition-transform" />
+                    </div>
+
+                    <div class="p-4">
+                        <h3 class="font-semibold">Catalog</h3>
+                        <p class="text-sm text-gray-600 mt-1">A simple product catalog application built with React. Made as an assignment. Uses Dummy Data.</p>
+
+                        <!-- THIS IS THE BUTTON -->
+
+                        <div class="mt-4 flex gap-3">
+                            <button data-modal-target="modal-catalog" class="inline-block border border-indigo-600 text-indigo-600 px-3 py-1 rounded-full hover:bg-indigo-600 hover:text-white hover:scale-105 transition">
+                                See Details
+                            </button>
+                            
+                            <a href="https://github.com/Cel44/Catalog.git" target="_blank" rel="noopener" class="inline-block border border-gray-300 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-100 transition">View Repo</a>
+                        </div>
+                    </div>
+
+                </div>
+
                 <!-- Milestone 3 project -->
                 <div class="group block bg-white rounded-2xl shadow-xl transform transition">
                     <div class="h-48 bg-gray-100 rounded-t-2xl overflow-hidden">
-                        <img src="assets/revoushop.png" alt="RevouShop" class="w-full h-full object-cover transition-transform" />
+                        <img src="assets/revoushop.png" alt="RevouShop" class="w-full h-full object-fit transition-transform" />
                     </div>
 
                     <div class="p-4">
@@ -321,6 +345,82 @@
 
                             <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">
                                 <img src="assets/guess.png" alt="Number Guessing" class="w-full h-full object-cover object-[5%_60%]" />
+                            </div>
+                        </div>
+
+                        <p class="mt-3 text-sm text-gray-500">This modal contains project details only. Press [esc] or close to return to the page.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!------------------------ REVOFUN MODAL PROJECT 2 -------------------------------->
+        <div id="modal-catalog" role="dialog" aria-hidden="true" class="fixed inset-0 hidden z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+            <div class="bg-white rounded-2xl w-[90%] max-w-2xl max-h-[80vh] overflow-y-auto p-6 relative shadow-2xl">
+
+                <!------------------------ TOP-RIGHT CLOSE BUTTON ------------------------------>
+
+                <div class="absolute top-4 right-4 z-20">
+                    <button class="modal-close text-white bg-red-600 hover:bg-red-800 rounded-full p-2" data-modal-close aria-label="Close modal">CLOSE</button>
+                </div>
+
+                <!------------------------ FULL-PAGE MODAL CONTENT ------------------------------>
+                <div class="bg-white w-full h-full overflow-auto p-6" role="document" tabindex="-1">
+                    <div class="flex items-start justify-between">
+                        <h2 class="text-2xl font-bold mb-2">Catalog - A Simply Made Catalog</h2>
+                    </div>
+
+                    <div class="mt-4 text-gray-700">
+                        <h3 class="font-bold">Overview</h3>
+                        <p class="mb-2">This catalog website is made simply as an assignment to practice React. It uses dummy data and has no backend connection. The main purpose of this project is to demonstrate my ability to build a React application with reusable components, manage filtering, and create a responsive UI using Tailwind CSS. The catalog displays a list of products with names, and prices, and categories allowing users to browse through the items with ease.
+                        </p>
+
+                        <h3 class="font-bold mt-4">Method</h3>
+                        <p class="text-m font-medium">Development Process</p>
+                        <ul class="list-disc list-inside text-sm text-gray-600">
+                            <li>Built using Next.Js and Styled with Tailwind CSS</li>
+                            <li>Implemented responsive design principles for cross-device compatibility</li>
+                            <li>Implemented filtering functionality to allow users to narrow down product selections</li>
+                        </ul>
+
+                        <h3 class="font-bold mt-4">Features</h3>
+                            <p class="font-semibold">Filtering</p>
+                                <ul class="list-disc list-inside text-sm text-gray-600">
+                                    <li>Filter by categories</li>
+                                    <li>Filter by sub-categories</li>
+                                    <li>Filter by brands</li>
+                                </ul>
+
+                            <p class="font-semibold mt-2">Additional features</p>
+                                <ul class="list-disc list-inside text-sm text-gray-600">
+                                    <li>Instant search and filtering</li>
+                                    <li>Uses Params, refreshes will not reset the filters</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3 class="font-bold mt-4">My Contributions</h3>
+                                <ul class="list-disc list-inside text-sm text-gray-600">
+                                    <li>Designing the layout and UI structure</li>
+                                    <li>Implementing logic</li>
+                                </ul>
+
+                        <h3 class="font-bold mt-4">Tech Stack</h3>
+                        <p class="text-sm text-gray-600">Next.Js, Tailwind CSS</p>
+
+                        <h3 class="font-semibold mt-3">Screenshots / Preview</h3>
+                        <div class="mt-2 grid grid-cols-3 gap-2">
+                            <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">
+                                <img src="assets/catalog.png" alt="Homepage" class="w-full h-full object-cover object-[0%_60%]" />
+                            </div>
+
+                            <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">
+                                <img src="assets/categories.png" alt="Categories Filtering" class="w-full h-full object-cover object-[5%_60%]" />
+                            </div>
+
+                            <div class="bg-gray-100 rounded overflow-hidden h-32 flex items-center justify-center text-xs text-gray-500">
+                                <img src="assets/categories_2.png" alt="After Filtering" class="w-full h-full object-cover object-[5%_60%]" />
                             </div>
                         </div>
 
